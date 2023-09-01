@@ -5,9 +5,13 @@ using namespace std;
 int main( void ){
 
     try{
-        Stack stack;
+        Stack stack( 3 );
         stack.push( 1 );
         cout << stack.pop() << endl;
+        stack.push( 2 );
+        stack.push( 99 );
+        stack.push( 22 );
+        stack.push( 66 );
     }
     catch( stack_bad_alloc &sba ){
         cout << "Allocation problem occured." << endl;
